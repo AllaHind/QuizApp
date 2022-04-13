@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Scorre"
+    android:orientation="vertical"
+    android:layout_margin="25sp"
+    >
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10px"
+
+        android:layout_marginBottom="50px"
+        android:src="@drawable/logoo">
+
+    </ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Votre score est :"
+        android:layout_gravity="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        ></TextView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"><![CDATA[
+
+
+            android:layout_width="156dp"
+            android:layout_height="238dp">
+
+
+
+
+
+        ]]>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="320dp"
+            android:layout_height="321dp"
+            android:background="@drawable/circle_shape"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="50"
+            android:progressDrawable="@drawable/circular_progress_bar" />
+
+        <TextView
+            android:id="@+id/scoreTV"
+            android:layout_width="67dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+
+            android:text="20%"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="350dp">
+
+            <Button
+                android:id="@+id/logoutbtn"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="20dp"
+
+                android:text="logout"></Button>
+
+            <Button
+                android:id="@+id/retrybtn"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:text="retry"></Button>
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

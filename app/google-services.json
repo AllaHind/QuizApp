@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "447685206673",
+    "project_id": "quizzapphind",
+    "storage_bucket": "quizzapphind.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:447685206673:android:6143916156afa563799530",
+        "android_client_info": {
+          "package_name": "com.alla.quizapp2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "447685206673-8jfnf7dg7fddn403oiidhi4pavbv0nos.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9MiJVwaYu6EG2hQlWBpB-ZaM3YFFS5Yg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "447685206673-8jfnf7dg7fddn403oiidhi4pavbv0nos.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
