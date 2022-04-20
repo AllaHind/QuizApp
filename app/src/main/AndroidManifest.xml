@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="quizapp_C">
+    package="com.alla.quizapp_c">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -12,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizApp2">
         <activity
-            android:name="com.alla.quizapp_C.QuizActivity"
+            android:name="com.alla.quizapp_c.QuizActivity"
             android:exported="false" />
         <activity
-            android:name="com.alla.quizapp_C.SplashActivity"
+            android:name="com.alla.quizapp_c.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,13 +23,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.alla.quizapp_C.Register"
-            />  <activity
-            android:name="com.alla.quizapp_C.Scorre"
+       <activity
+            android:name="com.alla.quizapp_c.Scorre"
             />
 
-<activity android:name="com.alla.quizapp_C.MainActivity"></activity>
+<activity android:name="com.alla.quizapp_c.MainActivity"></activity>
+<activity android:name="com.alla.quizapp_c.Register"></activity>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.alla.quizapp_C;
+package com.alla.quizapp_c;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,14 +14,15 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText emailTxt;
-    EditText pwdTxt;
+    TextInputLayout emailTxt;
+    TextInputLayout pwdTxt;
     Button loginBtn;
     TextView register;
     private FirebaseAuth mAuth;
@@ -33,13 +34,13 @@ public class MainActivity extends AppCompatActivity {
         if (mAuth.getCurrentUser() != null) {
             Intent intent = new Intent(MainActivity.this, QuizActivity.class);
             startActivity(intent);
-
+finish();
             return;
         }
-        emailTxt=(EditText) findViewById(R.id.Email);
-        pwdTxt=(EditText)findViewById(R.id.Pwd);
-        loginBtn=(Button)findViewById((R.id.LoginButton));
-        register=(TextView)findViewById(R.id.Register);
+        emailTxt=(TextInputLayout) findViewById(R.id.email);
+        pwdTxt=(TextInputLayout)findViewById(R.id.pwd);
+        loginBtn=(Button) findViewById((R.id.LoginButton));
+        register=(TextView) findViewById(R.id.Register);
 
         register.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -49,11 +50,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
         loginBtn.setOnClickListener((view) -> {
-            if (emailTxt.getText().toString().isEmpty() || pwdTxt.getText().toString().isEmpty()) {
+            if (emailTxt.getEditText().getText().toString().isEmpty() || pwdTxt.getEditText().getText().toString().isEmpty()) {
                 Toast.makeText(this, "Please fill all fields", Toast.LENGTH_LONG).show();
                 return;
             }
-            mAuth.signInWithEmailAndPassword(emailTxt.getText().toString(), pwdTxt.getText().toString())
+            mAuth.signInWithEmailAndPassword(emailTxt.getEditText().getText().toString(), pwdTxt.getEditText().getText().toString())
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {

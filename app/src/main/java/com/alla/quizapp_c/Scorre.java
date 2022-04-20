@@ -1,4 +1,4 @@
-package com.alla.quizapp_C;
+package com.alla.quizapp_c;
 
 
 import android.content.Intent;
@@ -34,6 +34,19 @@ public class Scorre extends AppCompatActivity {
 
 
         Button btnlogout =(Button) findViewById(R.id.logoutbtn);
+        Button retry =(Button) findViewById(R.id.retrybtn);
+        retry.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent switchActivityIntent = new Intent(Scorre.this, MainActivity.class);
+                startActivity(switchActivityIntent);
+
+            }
+
+        });
+
+
+
         btnlogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

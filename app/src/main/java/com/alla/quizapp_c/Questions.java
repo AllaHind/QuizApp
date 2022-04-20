@@ -1,9 +1,9 @@
-package com.alla.quizapp_C;
+package com.alla.quizapp_c;
 
 
 public class Questions {
     public String Truevalue;
-    public String falsevalue;
+    public String Falsevalue;
     public String Question;
     public String image;
 
@@ -13,13 +13,13 @@ public class Questions {
     }
 
 
-    public Questions(String Question,String Truevalue, String falsevalue,String image){
+    public Questions(String Question,String Truevalue, String Falsevalue,String image){
 
 
 
         this.Question=Question;
         this.Truevalue = Truevalue;
-        this.falsevalue =  falsevalue;
+        this.Falsevalue =  Falsevalue;
         this.image=image;
 
     }

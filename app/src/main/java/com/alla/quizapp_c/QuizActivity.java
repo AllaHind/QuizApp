@@ -1,8 +1,8 @@
-package com.alla.quizapp_C;
+package com.alla.quizapp_c;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
+import com.alla.quizapp_c.R;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -46,7 +46,7 @@ public class QuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz1);
 
         //////////////////////////////////////////////////////////////////////////////
-
+        RadioGroup radioGroup = findViewById(R.id.radio);
         dbroot = FirebaseFirestore.getInstance();
 
         dbroot.collection("Quiz").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -69,9 +69,9 @@ public class QuizActivity extends AppCompatActivity {
         });
 
 
-        RadioGroup radioGroup = findViewById(R.id.radio);
 
-        Button btnext = findViewById(R.id.Next);
+
+        Button btnext = findViewById(R.id.next_btn);
 
         btnext.setOnClickListener(new View.OnClickListener() {
 
@@ -122,7 +122,7 @@ public class QuizActivity extends AppCompatActivity {
 
 
 
-                    radioGroup.clearCheck();
+
 
                     qmanage(radioButton.getText().toString());
 
@@ -141,7 +141,7 @@ public class QuizActivity extends AppCompatActivity {
 
     }
     private int qmanage(String k) {
-
+        RadioGroup radioGroup = findViewById(R.id.radio);
         if(k.equals(listquestion.get(docI).Truevalue)){
 
             scoreCalcul=scoreCalcul+20;
@@ -152,6 +152,7 @@ public class QuizActivity extends AppCompatActivity {
         if(indice!=5){
 
             indice++;
+            radioGroup.clearCheck();
             reloadQuestion();
         }
         else{
@@ -170,7 +171,6 @@ public class QuizActivity extends AppCompatActivity {
         Random rand= new Random();
 
 
-
         docI = rand.nextInt(listquestion.size());
 
         showquestion(docI);
@@ -184,8 +184,8 @@ public class QuizActivity extends AppCompatActivity {
     private void showquestion(int i) {
 
         Random rand= new Random();
-        TextView qut = findViewById(R.id.q);
-
+        TextView qut = findViewById(R.id.question_view);
+TextView NoQuiz=findViewById(R.id.no_of_questions_view);
         ImageView img = findViewById(R.id.imageQuizz);
 
 
@@ -218,18 +218,35 @@ public class QuizActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         qut.setText(listquestion.get(docI).Question);
-        j = rand.nextInt(2);
+        NoQuiz.setText("Quiz "+indice);
+        j = rand.nextInt(5);
 
         if(j==0) {
             r1.setText(listquestion.get(docI).Truevalue);
-            r2.setText(listquestion.get(docI).falsevalue);
+            r2.setText(listquestion.get(docI).Falsevalue);
 
         }
-        else if(j==1){
-            r1.setText(listquestion.get(docI).falsevalue);
+        else if(j==1) {
+            r1.setText(listquestion.get(docI).Falsevalue);
+            r2.setText(listquestion.get(docI).Truevalue);
+        }
+            else if(j==2) {
+            r1.setText(listquestion.get(docI).Falsevalue);
+            r2.setText(listquestion.get(docI).Truevalue);
+        }
+            else if(j==3) {
+            r1.setText(listquestion.get(docI).Falsevalue);
             r2.setText(listquestion.get(docI).Truevalue);
 
+        }else if(j==4) {
+            r1.setText(listquestion.get(docI).Falsevalue);
+            r2.setText(listquestion.get(docI).Truevalue);
 
+        }else if(j==5) {
+            r1.setText(listquestion.get(docI).Falsevalue);
+            r2.setText(listquestion.get(docI).Truevalue);
+
+        }
 
 
 
@@ -252,5 +269,5 @@ public class QuizActivity extends AppCompatActivity {
 
 
 
-}
+
 

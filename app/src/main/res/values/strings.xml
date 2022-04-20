@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">QuizApp2</string>
+    <string name="app_name"></string>
         <string name="sign_hello">HELLO THERE, </string>
         <string name="sign_welcome">WELCOME BACK</string>
         <string name="signin_hint">Sign to continue</string>
@@ -53,7 +53,7 @@
         <string name="seventy_score">70% Score</string>
         <string name="next_level">Next Level</string>
         <string name="hundred_score">100% Score</string>
-        <string name="question_number_countdown">1/10</string>
+        <string name="question_number_countdown">1/5</string>
         <string name="share_question">Share Question</string>
         <string name="next">Next</string>
         <string name="todo">QuizBox Image</string>

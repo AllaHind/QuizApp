@@ -1,4 +1,4 @@
-package com.alla.quizapp_C;
+package com.alla.quizapp_c;
 
 public class User {
 
